@@ -35,7 +35,7 @@ public class EmailController {
         .httpStatus(HttpStatus.OK)
         .success(true)
         .build());
-  }
+  
   }
     
 
