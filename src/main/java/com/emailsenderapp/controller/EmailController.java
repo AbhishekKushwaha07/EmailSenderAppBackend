@@ -28,7 +28,7 @@ public class EmailController {
   private EmailService emailService;
 
   @GetMapping("/")
-  Public ResponseEntity<CustomResponse> DemoTest(){
+  public ResponseEntity<CustomResponse> DemoTest(){
     return ResponseEntity.ok(CustomResponse
         .builder()
         .message("API Work successfully")
