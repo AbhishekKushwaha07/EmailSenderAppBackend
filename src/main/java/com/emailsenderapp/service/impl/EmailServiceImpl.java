@@ -33,7 +33,7 @@ import jakarta.mail.internet.MimeMessage;
 @Service
 public class EmailServiceImpl implements EmailService {
 
-  @Value("${spring.mail.username}")
+  @Value("${spring.mail.from}")
   private String usernameEmail;
 
   @Autowired
