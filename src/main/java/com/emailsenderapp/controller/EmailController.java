@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,6 +26,18 @@ public class EmailController {
 
   @Autowired
   private EmailService emailService;
+
+  @GetMapping("/")
+  Public ResponseEntity<CustomResponse> DemoTest(){
+    return ResponseEntity.ok(CustomResponse
+        .builder()
+        .message("API Work successfully")
+        .httpStatus(HttpStatus.OK)
+        .success(true)
+        .build());
+  }
+  }
+    
 
   @PostMapping("/send")
   public ResponseEntity<CustomResponse> sendEmail(@RequestBody EmailRequest request) {
